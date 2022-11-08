@@ -24,8 +24,10 @@ const BottomTabs: React.FC = () => {
     <div className="bottom-tabs-container">
       {TABS.map((tab, index) => (
         <div className="tab-item" key={`bottom_tab_${index}`}>
-          <img src={tab.icon} alt="" />
-          {tab.isNotify ? <div className="red-dot" /> : null}
+          <div className="position-relative">
+            <img src={tab.icon} alt="" />
+            {tab.isNotify ? <div className="red-dot" /> : null}
+          </div>
         </div>
       ))}
     </div>
